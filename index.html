@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zilem Method 3.5 — Студия Улучшения Видео и Защиты от Сжатия TikTok</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="antialiased selection:bg-cyan-400 selection:text-slate-950">
+
+  <!-- Ambient Liquid Glass Background -->
+  <div class="ambient-bg"></div>
+  <div class="ambient-grid"></div>
+
+  <!-- Hidden Media Sources for Real-Time Canvas Engine -->
+  <div class="hidden" aria-hidden="true">
+    <video id="hiddenSourceVideo" playsinline muted loop crossorigin="anonymous"></video>
+    <img id="assetJdmImg" src="user_uploaded_files/ttl=63d/tool_generated/watermarked_img_13077602414594708148.jpg" alt="JDM Night Scene" />
+    <img id="assetCyberImg" src="user_uploaded_files/ttl=63d/tool_generated/watermarked_img_13241905757644962747.jpg" alt="Cyberpunk Scene" />
+  </div>
+
+  <!-- Sticky Liquid Glass Header -->
+  <header class="glass-nav sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
+      <!-- Brand Logo -->
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 flex items-center justify-center shadow-lg shadow-cyan-500/30 font-extrabold text-slate-950 text-base">
+          Z
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold tracking-tight text-white text-sm sm:text-base">ZILEM METHOD</span>
+            <span class="px-2 py-0.5 text-[10px] font-bold rounded-full bg-cyan-400/15 text-cyan-300 border border-cyan-400/30">v3.5 PRO</span>
+          </div>
+          <p class="text-[11px] text-slate-400 hidden sm:block">Анти-сжатие TikTok · Cтеклянный движок Zeta Engine</p>
+        </div>
+      </div>
+
+      <!-- Navigation Pills -->
+      <nav class="hidden md:flex items-center gap-1.5">
+        <button type="button" data-nav-target="optimizer" class="btn-glass active-tab px-3.5 py-1.5 text-xs">Оптимизатор</button>
+        <button type="button" data-nav-target="presets" class="btn-glass px-3.5 py-1.5 text-xs">Настройки без видео</button>
+        <button type="button" data-nav-target="inspector" class="btn-glass px-3.5 py-1.5 text-xs">Инспектор кодека</button>
+        <button type="button" data-nav-target="verified" class="btn-glass px-3.5 py-1.5 text-xs">Live & Эдиты</button>
+        <button type="button" data-nav-target="guides" class="btn-glass px-3.5 py-1.5 text-xs">Чеклист ТТ</button>
+      </nav>
+
+      <!-- Credits & Quick Action -->
+      <div class="flex items-center gap-2">
+        <div class="glass-pill px-3 py-1 text-xs flex items-center gap-2">
+          <span class="live-dot"></span>
+          <span id="navCreditsBadge" class="font-semibold text-cyan-300">30 credits</span>
+        </div>
+        <button type="button" id="btnClaimCredits" class="btn-glass px-3 py-1.5 text-xs text-cyan-300 border-cyan-400/30 hover:border-cyan-400">
+          + Кредиты
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-12">
+
+    <!-- HERO SECTION (Zilem Method 3.5 Liquid Glass Header) -->
+    <section class="glass-panel p-6 sm:p-10 relative overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2.5 glass-pill px-3.5 py-1.5 text-xs text-cyan-300">
+            <span class="live-dot"></span>
+            <span>ZETA ENGINE 3.5 ONLINE · БЕЗ ПЕРЕЖАТИЯ И «ШАКАЛОВ» В TIKTOK</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Твое видео в TikTok — <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400">в том самом качестве</span>, в котором ты его создал.
+          </h1>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+            Алгоритм обхода серверного сжатия TikTok: адаптивная контурная резкость <strong>CAS</strong>, субпиксельное анти-бандинг зерно <strong>Luma Dither</strong> для защиты темных сцен, фиксация матрицы <strong>BT.709</strong> и потолка битрейта <strong>14.5 Мбит/с (High@L4.2)</strong>. Работает со своим видео и в интерактивном режиме <strong>без загрузки файла</strong>.
+          </p>
+
+          <!-- Mode Switcher & Fast CTA -->
+          <div class="flex flex-wrap items-center gap-3 pt-1">
+            <button type="button" id="btnModeUpload" class="btn-glow px-5 py-3 text-sm flex items-center gap-2">
+              <span>📤 Закинуть свое видео</span>
+            </button>
+            <button type="button" id="btnModeNoVideo" class="btn-glass active-tab px-5 py-3 text-sm flex items-center gap-2">
+              <span>⚡ Режим «Без видео» (60 FPS Симулятор + Пресеты)</span>
+            </button>
+          </div>
+
+          <!-- Key Technical Specs Pills -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
+            <div class="glass-card p-3">
+              <div class="text-xs text-slate-400">Потолок TikTok</div>
+              <div class="text-sm font-bold text-white">1080×1920 · 60 FPS</div>
+            </div>
+            <div class="glass-card p-3">
+              <div class="text-xs text-slate-400">Целевой битрейт</div>
+              <div class="text-sm font-bold text-cyan-300">14.5 Mbps VBR</div>
+            </div>
+            <div class="glass-card p-3">
+              <div class="text-xs text-slate-400">Защита теней</div>
+              <div class="text-sm font-bold text-purple-300">Luma Dither + CAS</div>
+            </div>
+            <div class="glass-card p-3">
+              <div class="text-xs text-slate-400">Твой баланс</div>
+              <div id="heroCreditsBadge" class="text-sm font-bold text-emerald-300">30 кредитов</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Server Telemetry Card (Like zilemmethod.com) -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="glass-card p-5 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2">
+                <span class="live-dot"></span> Live Статистика Сервера
+              </span>
+              <span class="text-[11px] text-slate-400 font-mono">обновление каждые 5с</span>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2.5 text-center">
+              <div class="bg-black/40 p-3 rounded-xl border border-white/10">
+                <div id="statVideosOptimized" class="text-lg sm:text-xl font-extrabold text-white">61 501</div>
+                <div class="text-[11px] text-slate-400">Оптимизировано</div>
+                <div class="text-[10px] text-emerald-400 font-semibold mt-0.5">↑ +40.1% за нед.</div>
+              </div>
+              <div class="bg-black/40 p-3 rounded-xl border border-white/10">
+                <div id="statBandwidthSaved" class="text-lg sm:text-xl font-extrabold text-cyan-300">2.90 TB</div>
+                <div class="text-[11px] text-slate-400">Трафика спасено</div>
+                <div class="text-[10px] text-emerald-400 font-semibold mt-0.5">↑ +197.5%</div>
+              </div>
+              <div class="bg-black/40 p-3 rounded-xl border border-white/10">
+                <div class="text-lg sm:text-xl font-extrabold text-purple-300">31 140</div>
+                <div class="text-[11px] text-slate-400">Авторов в сети</div>
+                <div class="text-[10px] text-cyan-300 font-semibold mt-0.5">Zeta 3.5 Active</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="text-xs font-semibold text-slate-400 mb-2">Прямой эфир оптимизации:</div>
+              <div id="liveActivityFeed" class="space-y-1.5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN WORKSPACE: ZETA ENGINE 3.5 OPTIMIZER & BEFORE/AFTER COMPARATOR -->
+    <section id="sec-optimizer" class="space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-extrabold text-white">Лаборатория Качества · Сравнение «До / После»</h2>
+          <p class="text-sm text-slate-400">Перетаскивай разделитель на экране: слева — стандартное сжатие TikTok, справа — алгоритм Zeta Engine 3.5</p>
+        </div>
+
+        <!-- One-Click Algorithm Niche Presets -->
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="text-xs text-slate-400 mr-1">Быстрые алгоритмы:</span>
+          <button type="button" data-algo-preset="anime_edit" class="btn-glass px-3 py-1.5 text-xs">⚡ Anime / Twixtor</button>
+          <button type="button" data-algo-preset="jdm_night" class="btn-glass px-3 py-1.5 text-xs">🏎️ Night JDM / Авто</button>
+          <button type="button" data-algo-preset="gaming_frag" class="btn-glass px-3 py-1.5 text-xs">🎯 CS2 / Valorant</button>
+          <button type="button" data-algo-preset="iphone_vlog" class="btn-glass px-3 py-1.5 text-xs">📱 iPhone HDR</button>
+          <button type="button" data-algo-preset="ultra_bypass" class="btn-glass px-3 py-1.5 text-xs text-cyan-300">🔥 Hard Bypass</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+        <!-- LEFT COLUMN (5 cols): 9:16 INTERACTIVE BEFORE/AFTER VIEWPORT -->
+        <div class="lg:col-span-5 glass-panel p-5 space-y-4">
+          <div class="flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-rose-500/20 text-rose-300 border border-rose-400/30">Без Zilem (540p)</span>
+              <span class="text-slate-400 text-xs">↔</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-400/30">С Zilem (1080p 60FPS)</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="btnToggleLoupe" class="btn-glass px-2.5 py-1 text-xs">🔍 2x Зум пикселей</button>
+              <button type="button" id="btnTogglePlay" class="btn-glass px-2.5 py-1 text-xs">⏸ Пауза</button>
+            </div>
+          </div>
+
+          <!-- 9:16 Canvas Viewport -->
+          <div id="comparisonViewport" class="comparison-viewport cursor-ew-resize">
+            <canvas id="comparisonCanvas" width="540" height="960"></canvas>
+            <div id="splitHandleLine" class="split-handle-line" style="left: 50%;"></div>
+            <div id="splitHandleKnob" class="split-handle-knob" style="left: 50%;">
+              <span class="text-xs font-bold">⇄</span>
+            </div>
+          </div>
+
+          <!-- Demo Scene Selector (For "Без видео" mode) -->
+          <div id="panelDemoScenes" class="space-y-2 pt-1">
+            <div class="text-xs font-semibold text-slate-300 flex items-center justify-between">
+              <span>Тестовые сцены (режим «Без своего видео»):</span>
+              <span class="text-cyan-300 font-mono">60 FPS Live Canvas</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button type="button" data-demo-scene="jdm" class="btn-glass active-tab px-3 py-2 text-xs text-left truncate">🌃 JDM Tokyo Night Rain</button>
+              <button type="button" data-demo-scene="cyberpunk" class="btn-glass px-3 py-2 text-xs text-left truncate">⚡ Cyberpunk Neon Anime</button>
+              <button type="button" data-demo-scene="cs2" class="btn-glass px-3 py-2 text-xs text-left truncate">🎯 CS2 60FPS HUD Grid</button>
+              <button type="button" data-demo-scene="vlog" class="btn-glass px-3 py-2 text-xs text-left truncate">✨ Dark Luxury Velocity</button>
+            </div>
+          </div>
+
+          <!-- Upload Dropzone (For "Свое видео" mode) -->
+          <div id="panelUploadBox" class="hidden pt-1">
+            <div id="videoDropZone" class="glass-card p-5 border-2 border-dashed border-cyan-400/40 text-center space-y-3">
+              <div class="text-2xl">🎬</div>
+              <div class="text-sm font-bold text-white">Перетащи сюда свой эдит / видео (MP4, MOV, WebM)</div>
+              <p class="text-xs text-slate-400">Локальная обработка прямо в браузере без потери приватности. Авто-расчет битрейта и защита от сжатия.</p>
+              <input type="file" id="videoFileInput" accept="video/mp4,video/quicktime,video/webm,video/*" class="hidden" />
+              <button type="button" id="btnTriggerUpload" class="btn-glow px-4 py-2 text-xs">Выбрать видеофайл с устройства</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN (7 cols): ALGORITHM CONTROLS, TELEMETRY & EXPORT -->
+        <div class="lg:col-span-7 space-y-5">
+
+          <!-- Telemetry & Compression Risk Card -->
+          <div class="glass-panel p-5 space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <div class="text-xs text-slate-400">Активный источник</div>
+                <div id="metaFileName" class="text-sm sm:text-base font-bold text-white">Демо-сцена: Tokyo JDM Night Rain (9:16)</div>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/15 text-cyan-300 border border-cyan-400/30">
+                Кодек: H.264 High@L4.2
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+              <div class="glass-card p-3">
+                <div class="text-slate-400">Геометрия кадра</div>
+                <div id="metaResolution" class="font-bold text-white mt-0.5">1080×1920 → 1080×1920</div>
+              </div>
+              <div class="glass-card p-3">
+                <div class="text-slate-400">Частота кадров</div>
+                <div id="metaFps" class="font-bold text-white mt-0.5">60 FPS → 60 FPS Lock</div>
+              </div>
+              <div class="glass-card p-3">
+                <div class="text-slate-400">Поток битрейта</div>
+                <div id="metaBitrate" class="font-bold text-cyan-300 mt-0.5">16.8 Мбит/с → 14.5 Мбит/с</div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-1">
+              <div class="bg-rose-500/10 border border-rose-500/30 rounded-xl p-3 flex items-center justify-between">
+                <span class="text-rose-200">Риск пережатия TikTok (до):</span>
+                <span id="metaRiskBefore" class="font-extrabold text-rose-300">78% (Высокий риск мыла)</span>
+              </div>
+              <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-3 flex items-center justify-between">
+                <span class="text-emerald-200">Сохранение качества с Zeta 3.5:</span>
+                <span id="metaScoreAfter" class="font-extrabold text-emerald-300">99.6% (Zilem Verified HQ)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fine-Tuning Sliders Panel -->
+          <div class="glass-panel p-6 space-y-5">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-bold text-white">Тонкая настройка алгоритмов анти-сжатия</h3>
+              <span class="text-xs text-cyan-300 font-mono">Реалтайм превью</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <!-- Slider 1: CAS Sharpening -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between text-xs">
+                  <label for="sliderCas" class="font-semibold text-slate-200">Контурная резкость (CAS Sharpen)</label>
+                  <span id="valCas" class="text-cyan-300 font-mono font-bold">72%</span>
+                </div>
+                <input id="sliderCas" type="range" min="0" max="100" value="72" class="glass-slider" />
+                <p class="text-[11px] text-slate-400">Компенсирует замыливание мелких текстур при H.264 ре-энкоде</p>
+              </div>
+
+              <!-- Slider 2: Luma Anti-Banding Grain -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between text-xs">
+                  <label for="sliderGrain" class="font-semibold text-slate-200">Анти-шакал в тенях (Luma Dither Grain)</label>
+                  <span id="valGrain" class="text-cyan-300 font-mono font-bold">38%</span>
+                </div>
+                <input id="sliderGrain" type="range" min="0" max="100" value="38" class="glass-slider" />
+                <p class="text-[11px] text-slate-400">Микро-шум не дает кодеку TikTok ронять битрейт на темном фоне</p>
+              </div>
+
+              <!-- Slider 3: Micro-Contrast -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between text-xs">
+                  <label for="sliderContrast" class="font-semibold text-slate-200">Локальный микроконтраст (HDR Pop)</label>
+                  <span id="valContrast" class="text-cyan-300 font-mono font-bold">64%</span>
+                </div>
+                <input id="sliderContrast" type="range" min="0" max="100" value="64" class="glass-slider" />
+                <p class="text-[11px] text-slate-400">Глубокий черный без клиппинга (16–235 TV/BT.709 диапазон)</p>
+              </div>
+
+              <!-- Slider 4: Chroma Lock -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between text-xs">
+                  <label for="sliderChroma" class="font-semibold text-slate-200">Защита цвета (BT.709 Chroma Lock)</label>
+                  <span id="valChroma" class="text-cyan-300 font-mono font-bold">55%</span>
+                </div>
+                <input id="sliderChroma" type="range" min="0" max="100" value="55" class="glass-slider" />
+                <p class="text-[11px] text-slate-400">Убирает бледность после конвертации цветовых профилей</p>
+              </div>
+
+              <!-- Slider 5: Pre-Denoise -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between text-xs">
+                  <label for="sliderDenoise" class="font-semibold text-slate-200">Очистка цветового шума (Chroma Clean)</label>
+                  <span id="valDenoise" class="text-cyan-300 font-mono font-bold">30%</span>
+                </div>
+                <input id="sliderDenoise" type="range" min="0" max="100" value="30" class="glass-slider" />
+                <p class="text-[11px] text-slate-400">Освобождает битрейт под полезные детали кадра</p>
+              </div>
+
+              <!-- Slider 6: Target Bitrate Ceiling -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between text-xs">
+                  <label for="sliderBitrate" class="font-semibold text-slate-200">Целевой потолок VBR битрейта</label>
+                  <span id="valBitrate" class="text-cyan-300 font-mono font-bold">14.5 Мбит/с</span>
+                </div>
+                <input id="sliderBitrate" type="range" min="8" max="18" step="0.5" value="14.5" class="glass-slider" />
+                <p class="text-[11px] text-slate-400">Золотая зона TikTok: 13.5–15.0 Мбит/с (выше 20М принудительно режется)</p>
+              </div>
+            </div>
+
+            <!-- Metadata & Container Bypass Toggles -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 border-t border-white/10 text-xs">
+              <label class="glass-card p-3 flex items-center gap-2.5 cursor-pointer">
+                <input id="chkSpoofMoov" type="checkbox" checked class="accent-cyan-400 w-4 h-4" />
+                <span>Патч атома <code>moov</code> (FastStart)</span>
+              </label>
+              <label class="glass-card p-3 flex items-center gap-2.5 cursor-pointer">
+                <input id="chkStripTags" type="checkbox" checked class="accent-cyan-400 w-4 h-4" />
+                <span>Стереть теги CapCut / AE</span>
+              </label>
+              <label class="glass-card p-3 flex items-center gap-2.5 cursor-pointer">
+                <input id="chkBt709" type="checkbox" checked class="accent-cyan-400 w-4 h-4" />
+                <span>Жесткий флаг <code>bt709</code></span>
+              </label>
+            </div>
+
+            <!-- Primary Action Buttons -->
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <button type="button" id="btnRunEngine" class="btn-glow px-6 py-3.5 text-sm flex-1 min-w-[240px]">
+                🚀 Запустить Zeta Engine 3.5 (Улучшить и экспортнуть)
+              </button>
+              <button type="button" id="btnDownloadPresetJson" class="btn-glass px-4 py-3.5 text-xs">
+                💾 Скачать матрицу пресета (.JSON)
+              </button>
+            </div>
+
+            <!-- Live Processing Progress Bar -->
+            <div id="processingStatusPanel" class="hidden glass-card p-4 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <span id="processingStageLabel" class="text-cyan-300 font-semibold">Инициализация...</span>
+                <span id="processingPctLabel" class="font-mono font-bold text-white">0%</span>
+              </div>
+              <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                <div id="processingProgressBar" class="h-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 transition-all duration-300" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <!-- Completed Export Download Box -->
+            <div id="exportResultPanel" class="hidden glass-card p-4 border-emerald-400/40 bg-emerald-500/10 flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <div class="text-sm font-bold text-emerald-300">✓ Видео успешно оптимизировано через Zeta Engine 3.5!</div>
+                <div class="text-xs text-slate-300">Экспортирован поток с анти-бандинг зерном, CAS-резкостью и битрейт-локом.</div>
+              </div>
+              <button type="button" id="btnDownloadProcessedVideo" class="btn-glow px-4 py-2.5 text-xs">
+                ⬇ Скачать готовый файл
+              </button>
+            </div>
+          </div>
+
+          <!-- One-Click FFmpeg Byte-Stream Patcher Generator (Works without uploading video!) -->
+          <div class="glass-panel p-5 space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h4 class="text-sm font-bold text-white">Патчер без загрузки видео на сайт (Локальный FFmpeg 1-Click)</h4>
+                <p class="text-xs text-slate-400">Не хочешь грузить гигабайтные исходники в браузер? Скачай готовый скрипт под свои ползунки выше — просто перетащи на него видео на ПК.</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <button type="button" id="btnDownloadFfmpegWin" class="btn-glass px-3 py-1.5 text-xs text-cyan-300">⬇ Windows (.BAT)</button>
+                <button type="button" id="btnDownloadFfmpegMac" class="btn-glass px-3 py-1.5 text-xs text-purple-300">⬇ macOS / Linux (.SH)</button>
+                <button type="button" id="btnCopyFfmpegCmd" class="btn-glass px-3 py-1.5 text-xs">📋 Копировать</button>
+              </div>
+            </div>
+            <pre id="ffmpegCommandPreview" class="bg-black/60 border border-white/10 rounded-xl p-3 text-[11px] text-cyan-300 font-mono overflow-x-auto whitespace-pre-wrap break-all"></pre>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: NO-VIDEO EDITOR PRESETS & EXPORT CALCULATOR -->
+    <section id="sec-presets" class="glass-panel p-6 sm:p-8 space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-extrabold text-white">База Настроек Рендера (Режим «Без видео»)</h2>
+          <p class="text-sm text-slate-400">Точные параметры экспорта для любой программы монтажа, чтобы TikTok не включал агрессивный транскодер</p>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <button type="button" data-editor-tab="ae" class="btn-glass active-tab px-4 py-2 text-xs">After Effects</button>
+          <button type="button" data-editor-tab="capcut" class="btn-glass px-4 py-2 text-xs">CapCut Pro</button>
+          <button type="button" data-editor-tab="premiere" class="btn-glass px-4 py-2 text-xs">Premiere Pro</button>
+          <button type="button" data-editor-tab="davinci" class="btn-glass px-4 py-2 text-xs">DaVinci Resolve</button>
+          <button type="button" data-editor-tab="ffmpeg" class="btn-glass px-4 py-2 text-xs">FFmpeg CLI</button>
+        </div>
+      </div>
+
+      <div id="editorGuideContent"></div>
+    </section>
+
+    <!-- SECTION 3: CODEC & TIKTOK LINK INSPECTOR -->
+    <section id="sec-inspector" class="glass-panel p-6 sm:p-8 space-y-5">
+      <div class="max-w-3xl space-y-2">
+        <h2 class="text-2xl font-extrabold text-white">Инспектор Кодека и Проверка Ссылок TikTok</h2>
+        <p class="text-sm text-slate-400">Вставь ссылку на опубликованный ролик TikTok или название своего файла, чтобы проверить соответствие лимитам CDN (1080p, High@L4.2, GOP 30, ≤15 Mbps).</p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input
+          id="inspectorInput"
+          type="text"
+          placeholder="Например: https://www.tiktok.com/@creator/video/... или my_edit_4k60.mov"
+          class="flex-1 bg-black/50 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"
+        />
+        <button type="button" id="btnAnalyzeInspector" class="btn-glow px-6 py-3 text-sm shrink-0">
+          🔍 Проверить на сжатие
+        </button>
+      </div>
+
+      <div id="inspectorResultBox" class="hidden glass-card p-5"></div>
+    </section>
+
+    <!-- SECTION 4: VERIFIED IN THE WILD (Showcase like zilemmethod.com) -->
+    <section id="sec-verified" class="space-y-5">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 class="text-2xl font-extrabold text-white">Verified in the Wild · Проверенные Эдиты</h2>
+          <p class="text-sm text-slate-400">Реальные ролики авторов, прошедшие проверку Zilem Method без потери качества. Нажми «Применить пресет», чтобы скопировать их настройки в оптимизатор.</p>
+        </div>
+        <span class="glass-pill px-3.5 py-1.5 text-xs text-emerald-300 font-semibold">✓ 100% Защита от 540p мыла</span>
+      </div>
+
+      <div id="verifiedClipsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
+
+    <!-- SECTION 5: INTERACTIVE TIKTOK UPLOAD CHECKLIST (100% NO COMPRESSION) -->
+    <section id="sec-guides" class="glass-panel p-6 sm:p-8 space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-extrabold text-white">Чеклист Публикации в TikTok без Сжатия</h2>
+          <p class="text-sm text-slate-400">Даже идеальный файл можно испортить неправильной загрузкой. Отметь все пункты перед постом:</p>
+        </div>
+        <div class="text-right">
+          <div id="checklistScoreLabel" class="text-sm font-bold text-cyan-300">2 из 8 выполнено (25%)</div>
+          <div class="w-44 h-2 bg-white/10 rounded-full overflow-hidden mt-1">
+            <div id="checklistProgressBar" class="h-full bg-gradient-to-r from-cyan-400 to-emerald-400 transition-all duration-300" style="width: 25%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <label class="glass-card p-4 flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" data-check-id="c1" checked class="accent-cyan-400 w-4 h-4 mt-0.5 shrink-0" />
+          <div>
+            <div class="font-bold text-white">1. Разрешение строго 1080 × 1920 (не 4K!)</div>
+            <p class="text-xs text-slate-400 mt-0.5">TikTok всегда сжимает 4K своим быстрым серверным скейлером, который мылит картинку сильнее, чем рендер сразу в 1080p.</p>
+          </div>
+        </label>
+
+        <label class="glass-card p-4 flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" data-check-id="c2" checked class="accent-cyan-400 w-4 h-4 mt-0.5 shrink-0" />
+          <div>
+            <div class="font-bold text-white">2. Битрейт в коридоре 12.5 – 15.0 Мбит/с (H.264 High@L4.2)</div>
+            <p class="text-xs text-slate-400 mt-0.5">Видео с битрейтом выше 20 Мбит/с получают флаг принудительного пережатия. Держи 14.5 Мбит/с через наш оптимизатор.</p>
+          </div>
+        </label>
+
+        <label class="glass-card p-4 flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" data-check-id="c3" class="accent-cyan-400 w-4 h-4 mt-0.5 shrink-0" />
+          <div>
+            <div class="font-bold text-white">3. Выключена «Экономия данных» (Data Saver OFF)</div>
+            <p class="text-xs text-slate-400 mt-0.5">В приложении TikTok: Профиль → Меню (☰) → Настройки и конфиденциальность → Экономия данных → Выключить.</p>
+          </div>
+        </label>
+
+        <label class="glass-card p-4 flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" data-check-id="c4" class="accent-cyan-400 w-4 h-4 mt-0.5 shrink-0" />
+          <div>
+            <div class="font-bold text-white">4. Включен тумблер «Разрешить загрузку в высоком качестве (Upload HD)»</div>
+            <p class="text-xs text-slate-400 mt-0.5">На финальном экране публикации нажми «Еще (More options)» и проверь, что переключатель HD активен.</p>
+          </div>
+        </label>
+
+        <label class="glass-card p-4 flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" data-check-id="c5" class="accent-cyan-400 w-4 h-4 mt-0.5 shrink-0" />
+          <div>
+            <div class="font-bold text-white">5. Никаких встроенных фильтров и стикеров TikTok поверх видео</div>
+            <p class="text-xs text-slate-400 mt-0.5">Любой наложенный внутри приложения TikTok фильтр или гиф-стикер запускает повторный рендер видео в 720p.</p>
+          </div>
+        </label>
+
+        <label class="glass-card p-4 flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" data-check-id="c6" class="accent-cyan-400 w-4 h-4 mt-0.5 shrink-0" />
+          <div>
+            <div class="font-bold text-white">6. На iPhone передавай файл с ПК только через AirDrop или iCloud Drive (Файлы)</div>
+            <p class="text-xs text-slate-400 mt-0.5">Telegram без галочки «Отправить как файл» сжимает видео еще до того, как оно попадет в TikTok.</p>
+          </div>
+        </label>
+
+        <label class="glass-card p-4 flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" data-check-id="c7" class="accent-cyan-400 w-4 h-4 mt-0.5 shrink-0" />
+          <div>
+            <div class="font-bold text-white">7. Добавлено анти-бандинг зерно (Luma Dither 30–45%) для темных эдитов</div>
+            <p class="text-xs text-slate-400 mt-0.5">Без микро-зерна однородные темные градиенты распадаются на квадраты («шакалы»).</p>
+          </div>
+        </label>
+
+        <label class="glass-card p-4 flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" data-check-id="c8" class="accent-cyan-400 w-4 h-4 mt-0.5 shrink-0" />
+          <div>
+            <div class="font-bold text-white">8. Размер файла меньше 145 МБ и очищены метаданные CapCut</div>
+            <p class="text-xs text-slate-400 mt-0.5">Файлы тяжелее 150 МБ режутся на сервере жестче всего. Наш патч удаляет лишние метаданные.</p>
+          </div>
+        </label>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-white/10 mt-12 py-8 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>
+        <strong class="text-white">ZILEM METHOD 3.5 STUDIO</strong> · Liquid Glass Anti-Compression Engine for TikTok Creators
+      </div>
+      <div>
+        HTML5 Canvas · WebGL/2D CAS Sharpen · Luma Dither · FFmpeg CLI Generator
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="appToast" class="fixed bottom-5 right-5 z-50 glass-panel px-4 py-3 border-cyan-400/50 text-xs sm:text-sm font-semibold text-white shadow-2xl transition-all duration-300 opacity-0 pointer-events-none translate-y-4 flex items-center gap-2.5">
+    <span class="live-dot"></span>
+    <span id="appToastText">Готово!</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
